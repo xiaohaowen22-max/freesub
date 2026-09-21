@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01 - xiaohe
+- name: 🇧🇷 BR 01 - xiaohe
   type: vless
-  server: 188.114.97.9
-  port: 443
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  server: 157.228.142.148
+  port: 8443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: IDB8onmVBntUyt5T7T6cEjFW8VLRB.PAGES.DeV
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /vl/hOuSxbPWfvJMz6c44Y?ed=2560
+    path: '%2Fact%2Frank%2Flang%3Fed%3D2560'
     headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇧🇷 BR 01 - xiaohe
 rules:
 - MATCH,PROXIES
