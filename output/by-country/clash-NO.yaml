@@ -4,10 +4,10 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+- name: 🇳🇴 NO 01 - xiaohe
   type: ss
-  server: 62.109.12.234
-  port: 2055
+  server: 139.100.236.74
+  port: 1
   cipher: chacha20-ietf-poly1305
   password: WxYpOK1iPSJySbVNMMJDtw
   udp: true
@@ -16,12 +16,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  - 🇳🇴 NO 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  - 🇳🇴 NO 01 - xiaohe
 rules:
 - MATCH,PROXIES
