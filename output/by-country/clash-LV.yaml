@@ -4,47 +4,47 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇹 LT 01 - xiaohe
+- name: 🇱🇻 LV 01 - xiaohe
   type: vless
-  server: 213.183.55.153
-  port: 8443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  server: check-host.net
+  port: 2053
+  uuid: 29b2a593-35ce-4865-97be-b7e1da2eb003
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: shephe.dpdns.org
+  servername: shop.asamping.ir
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: shephe.dpdns.org
-- name: 🇱🇹 LT 02 - xiaohe
+      Host: shop.asamping.ir
+- name: 🇱🇻 LV 02 - xiaohe
   type: vless
-  server: lithuania-2.kochvpn.pw
+  server: latvia-3.kochvpn.pw
   port: 443
-  uuid: 2923fef2-3b52-a9c2-cde4-c2343eb74a2c
+  uuid: 8de0e6f4-d365-fa64-d5ba-eed9ea513e06
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lithuania-2.kochvpn.pw
+  servername: latvia-3.kochvpn.pw
   network: ws
   ws-opts:
     path: /stream/ws
     headers:
-      Host: lithuania-2.kochvpn.pw
+      Host: latvia-3.kochvpn.pw
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇹 LT 01 - xiaohe
-  - 🇱🇹 LT 02 - xiaohe
+  - 🇱🇻 LV 01 - xiaohe
+  - 🇱🇻 LV 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇹 LT 01 - xiaohe
-  - 🇱🇹 LT 02 - xiaohe
+  - 🇱🇻 LV 01 - xiaohe
+  - 🇱🇻 LV 02 - xiaohe
 rules:
 - MATCH,PROXIES
