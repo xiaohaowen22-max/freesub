@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+- name: 🇱🇻 LV 01 - xiaohe
   type: vless
-  server: 185.193.29.123
+  server: cdn.topingr.ir
   port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  uuid: 497f5381-3533-4c6a-939c-66eb3a7de108
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
+  servername: cdn.topingr.ir
   network: ws
   ws-opts:
-    path: /Telegram-WangCai2≡ƒç¿≡ƒç│
+    path: /gropcdn
     headers:
-      Host: notls.lukongtou.eu.org
+      Host: cdn.topingr.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇱🇻 LV 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇱🇻 LV 01 - xiaohe
 rules:
 - MATCH,PROXIES
