@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
   type: vless
-  server: 172.64.145.202
-  port: 2083
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  server: 104.18.0.1
+  port: 443
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: newwk1.f1w.de5.net
+  servername: all.speedtest03.ccwu.cc
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: newwk1.f1w.de5.net
+      Host: all.speedtest03.ccwu.cc
 proxy-groups:
 - name: PROXIES
   type: select
