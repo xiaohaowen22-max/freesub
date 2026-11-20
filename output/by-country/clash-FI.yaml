@@ -30,20 +30,6 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: 🇫🇮 FI 03 - xiaohe
-  type: vless
-  server: 104.17.145.145
-  port: 2083
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: vipfree.dr-ping.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vipfree.dr-ping.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +37,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
-  - 🇫🇮 FI 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -59,6 +44,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
-  - 🇫🇮 FI 03 - xiaohe
 rules:
 - MATCH,PROXIES
